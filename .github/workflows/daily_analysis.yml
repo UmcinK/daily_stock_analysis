@@ -11,7 +11,7 @@ on:
       mode:
         description: '运行模式'
         required: true
-        default: 'full'
+        default: 'market-only'
         type: choice
         options:
           - full          # 完整分析（股票+大盘）
@@ -44,7 +44,7 @@ jobs:
       - name: 设置 Python 环境
         uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: '3.10'
           cache: 'pip'
       
       - name: 安装依赖
